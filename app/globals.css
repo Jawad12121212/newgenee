@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: SwitzerM;
+    src: url('/fonts/SwitzerM.woff2') format(woff2);
+  }
+  @font-face {
+    font-family: SwitzerB;
+    src: url('/fonts/SwitzerB.woff2') format(woff2);
+  }
+  @font-face {
+    font-family: SwitzerR;
+    src: url('/fonts/SwitzerR.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: SoehneSD;
+    src: url('/fonts/SoehneSD.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: SoehneSH;
+    src: url('/fonts/SoehneSD.woff2') format(woff2);
+  }
+
+  @font-face {
+    font-family: CanelaC;
+    src: url('/fonts/CanelaC.woff2') format(woff2);
+  }
+}
+
+.btn span {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #ffffff71;
+  pointer-events: none;
+  border-radius: 50%;
+  /* height: 100px;
+  width: 100px; */
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+.img {
+  grid-row: var(--r);
+  grid-column: var(--c);
+}
+
+footer .before::before {
+  content: 'Hello World!';
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 150%;
+  height: 0%;
+  transition: 1s linear;
+  background: #fff;
+  z-index: -1;
+  transform: rotate(-6deg);
+}
+
+footer .before:hover::before {
+  /* width: 125%; */
+  height: 150%;
+}
