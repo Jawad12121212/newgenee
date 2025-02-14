@@ -22,7 +22,7 @@ const Images = () => {
     }, 'b')
   })
   return (
-    <section className='imagess h-[100vh] w-full relative grid grid-rows-5 grid-cols-7 overflow-hidden'>
+    <section className='imagess h-[100vh] max-sm:h-[50vh] w-full relative grid grid-rows-5 grid-cols-7 overflow-hidden'>
         <div style={{"--r": 1, "--c": 2}} className="left img overflow-hidden">
           <img className='object-cover object-center' src="/img/2.jpg" />
         </div>

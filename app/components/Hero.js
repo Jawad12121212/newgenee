@@ -70,8 +70,8 @@ const Hero = ({val}) => {
     });
 
     return (
-        <section className='main h-[230vh] w-full bg-black relative overflow-hidden'>
-            <div className="h-screen w-full flex flex-col justify-center items-center text-white">
+        <section className='main h-[230vh] max-sm:h-[100vh] w-full bg-black relative overflow-hidden'>
+            <div className="h-screen max-sm:h-[50vh] w-full flex flex-col justify-center items-center text-white">
                 {['A New', 'Generation', 'Communications', 'Agency'].map((item, i) => (
                     <div key={i} className="overflow-hidden">
                         <h1 id={`head${i}`} className={`leading-[9.5vw] uppercase text-[12vw] ${i <= 1 ? 'font-CanelaC' : 'font-SoehneSD'}`}>
@@ -84,9 +84,11 @@ const Hero = ({val}) => {
                     <p id='sec'>WHO PROVOKE, INSPIRE AND CONVERT</p>
                 </div>
             </div>
-
-            <div className="pare h-screen w-full overflow-hidden absolute top-[0%] z-[999] flex justify-center items-center">
-                <div className="child h-[26vh] w-[22vw]">
+                <div className=" md:hidden h-[20vh] w-[100%] flex justify-center items-center">
+                    <img className='h-[100%] w-[70%] object-cover object-center' src="/img/1.jpg" alt="" />
+                </div>
+            <div className="pare max-sm:hidden h-screen w-full overflow-hidden absolute top-[0%] z-[999] flex justify-center items-center">
+                <div className="child h-[26vh] w-[22vw] max-sm:w-full">
                     <div className="anime h-full w-[0%] overflow-hidden">
                         <div className="h-full w-full">
                             <img className="h-[120%] object-cover object-left" src="/img/1.jpg" alt="Image"/>
@@ -96,7 +98,7 @@ const Hero = ({val}) => {
 
             </div>
 
-            <div className="paraBox absolute bottom-0 h-[80vh] w-full bg-white flex flex-col items-center justify-center gap-[4vw]">
+            <div className="paraBox absolute bottom-0 h-[80vh] max-sm:h-[20vh] w-full bg-white flex flex-col items-center justify-center gap-[4vw]">
                 <p className='aniPara uppercase font-CanelaC text-center text-[3.7vw] leading-none font-[400]'>
                     {para.map((item, i) => (
                         <div key={i} className="overflow-hidden">

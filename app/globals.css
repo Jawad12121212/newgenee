@@ -65,7 +65,7 @@ body {
   0% {
     width: 0;
     height: 0;
-    opacity: 1;
+    opacity: .2;
   }
 
   100% {

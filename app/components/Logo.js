@@ -12,10 +12,10 @@ const Logo = () => {
         {h1: 'ESSENCE BEAUTY', img: 'https://sundaecreative.com/uploads/attachments/brand/ESSENCE_BEAUTY-450w.png'},
     ]
   return (
-    <section className='h-[120vh] w-full px-[2vw] flex items-center'>
-        <div className="h-[100vh] w-[100%] flex flex-wrap gap-[2vw]">
+    <section className='h-[120vh] w-full px-[2vw] max-sm:h-[25vh] flex items-center'>
+        <div className="h-[100vh] w-[100%] max-sm:h-[25vh] flex flex-wrap gap-[2vw]">
             {data.map((item, i) => (
-                <div key={i} className="h-[35vh] w-[22vw] flex flex-col justify-start items-center gap-[5vw] py-[1vw] border-t-[1px] border-black">
+                <div key={i} className="h-[35vh] max-sm:h-[10vh] w-[22vw] flex flex-col justify-start items-center gap-[5vw] py-[1vw] border-t-[1px] border-black">
                 <div className="flex justify-between w-full">
                     <span className="h-4 w-4 bg-red-600"></span>
                     <h1 className='font-CanelaC text-[1.7vw] font-bold leading-[1.5vw] '>{item.h1}</h1>

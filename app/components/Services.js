@@ -25,10 +25,10 @@ const Services = () => {
         { p1: 'SERVICE/004', h1: 'SOCIAL<br/>MEDIA' }
     ]
     return (
-        <section className='h-[250vh] w-full flex items-center'>
-            <div className="services h-[200vh] w-full bg-black">
+        <section className='h-[250vh] max-sm:h-[50vh] w-full flex items-center'>
+            <div className="services h-[200vh] max-sm:h-[40vh] w-full bg-black">
             {data.map((item, i) => (
-                <div key={i} className="elem bg-white border-t-[1px] border-b-[1px] border-black flex gap-[6vw] justify-center py-[2vw] hover:rounded-[90px] hover:duration-500 duration-500 h-[50vh]">
+                <div key={i} className="elem bg-white border-t-[1px] border-black flex gap-[6vw] justify-center py-[2vw] hover:rounded-[90px] hover:duration-500 duration-500 h-[50vh] max-sm:h-[10vh]">
                     <p className='text-[.9vw] text-[#F34848] font-SwitzerM'>{item.p1}</p>
                     <div className="">
                         {item.h1.split('<br/>').map((item, i) => (
